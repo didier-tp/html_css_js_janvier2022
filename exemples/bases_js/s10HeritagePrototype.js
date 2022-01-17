@@ -18,7 +18,7 @@ function Student(firstName, lastName, schoolName, grade)
 {
     Person.call(this, firstName, lastName);
 
-    this.cchoolName = schoolName || "unknown";
+    this.schoolName = schoolName || "unknown";
     this.grade = grade || 0;
 }
 
