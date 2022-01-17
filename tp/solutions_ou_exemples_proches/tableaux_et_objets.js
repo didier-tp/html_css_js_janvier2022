@@ -7,8 +7,13 @@ for(let i = 0 ; i < tabVal.length ; i++){
 console.log("somme = " + s);
 
 console.log("en pos=56 , tabVal[pos]=" + tabVal[56]); //undefined si indice 56 inexistant
-
-
+/*
+function comparaison(a,b){
+    return (a-b);
+}
+tabVal.sort(comparaison);
+*/
+//tabVal.sort( function (a,b) { return (a-b);} );
 tabVal.sort( (a,b)=> a-b );
 //où (a,b)=> a-b est une fonction de comparaison appelée en interne par sort()
 //qui compare a et b et renvoie >0 si a>b , 0 si a==b et <0 si a < b
@@ -86,6 +91,24 @@ function Devise(code, nom, change){
                    + this.nom + " : " + this.change)
     }
 }
+
+
+var d1 = new Devise("DKK" , "Couronne Danemark" , 7.7);
+d1.couleur = "rouge";//possible mais pas conseillé
+
+var d2 = new Devise("codeD2"); //undefined comme valeurs des paramètres
+                               //non renseignés nom et change
+console.log("d2 as JSON string = " +  JSON.stringify(d2) );
+console.log("d2.nom=" +  d2.change );//d2.nom = undefined
+
+console.log("d1=" + d1); //[oject Object]
+d1.display(); // [ DDK ] Couronne Danemark : 7.7
+console.log("d1 as JSON string = " +  JSON.stringify(d1) );
+//{"code":"DKK","nom":"Couronne Danemark","change":7.7,"couleur":"rouge"}
+
+console.log("code de d1=" + d1.code); //tout est par défaut public en javascript
+console.log("code de d1=" + d1["code"]); //possible avec objet vu comme tableau associatif 
+
 
 var tabDevises = [];
 tabDevises.push(new Devise("USD","Dollar",1.0));

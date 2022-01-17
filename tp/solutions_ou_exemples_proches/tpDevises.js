@@ -30,6 +30,7 @@ tabDevises.push(new Devise("EUR","Euro",0.9));
 tabDevises.push(new Devise("GBP","Livre",0.8));
 tabDevises.push(new Devise("JPY","Yen",123.0));
 
+/*
 Devise.prototype.augmenterChangeEnPourcentage  = function(pourcentageAugmentation){
    this.change *= (1 + pourcentageAugmentation/100); 
 }
@@ -37,8 +38,9 @@ Devise.prototype.augmenterChangeEnPourcentage  = function(pourcentageAugmentatio
 for(i in tabDevises){
     tabDevises[i].augmenterChangeEnPourcentage(5);
  }
+*/
 
-for(i in tabDevises){
+for(let i in tabDevises){
    tabDevises[i].display();
 }
 
