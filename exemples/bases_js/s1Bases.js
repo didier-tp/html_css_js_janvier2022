@@ -28,4 +28,13 @@ if(v1) console.log("v1 considéree comme true");
       else console.log("v1 considéree comme false");
 
 if(v2) console.log("v2 considéree comme true");
-      else console.log("v2 considéree comme false");      
+      else console.log("v2 considéree comme false"); 
+      
+var sB = "true";
+let bb = (sB === "true"); //bb=true typeof bb =boolean
+console.log("bb=" + bb + " typeof bb =" + typeof bb); 
+
+var sB2 = "false";
+if(sB2 === "true") 
+      console.log("sB2 est a true");
+else  console.log("sB2 est a false");
