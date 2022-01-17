@@ -9,7 +9,7 @@ var optionsB = { year: "numeric", month: "2-digit", day: "2-digit"};
 var sDate1B = d1.toLocaleDateString("fr-FR", optionsB);
 console.log("sDate1B="+sDate1B);// 06/01/2022
 
-var sDate1C = d1.toISOString();
+var sDate1C = d1.toISOString()
 console.log("sDate1C="+sDate1C);// 2022-01-06T16:58:46.181Z (Z = Zero decalage vis a vis de  UTC)
 
 var sDate1D = d1.toISOString().split('T')[0];

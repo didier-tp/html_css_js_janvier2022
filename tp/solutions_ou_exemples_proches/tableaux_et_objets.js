@@ -6,7 +6,12 @@ for(let i = 0 ; i < tabVal.length ; i++){
 }
 console.log("somme = " + s);
 
+tabVal.sort( (a,b)=> a-b );
+//où (a,b)=> a-b est une fonction de comparaison appelée en interne par sort()
+//qui compare a et b et renvoie >0 si a>b , 0 si a==b et <0 si a < b
+console.log("apres tri, tabVal=" + tabVal);
 
+/*
 //en java , les tableaux ont des tailles fixes , ici 20: 
 //double tabNum[] = new double[20];
 
@@ -32,16 +37,28 @@ function callbackDate(){
 }
 
 setTimeout(callbackDate , 5000); //5000 ms = 5s
-
+*/
 var saisonsCouleurs = []; // Tableau associatif
 saisonsCouleurs["hiver"] = "blanc";
 saisonsCouleurs["printemps"] = "vert";
 saisonsCouleurs["ete"] = "jaune";
 saisonsCouleurs["automne"] = "marron";
 
+saisonsCouleurs["printemps"] = "vert_clair";
+
 for(let key in saisonsCouleurs){
     console.log(key+ " : " + saisonsCouleurs[key]);
 }
+
+console.log(" couleur du printemps : " + saisonsCouleurs["printemps"]);
+
+var tabJours= [ "lundi" , "mardi" , "mercredi"];  
+
+/* a faire en TP : dans une boucle 
+tabJours.forEach((j) => { ...} afficher chaque valeurs du tableau tabJours en majuscules*/
+tabJours.forEach( (j) => { console.log(j.toUpperCase()); });
+
+
 
 var devise1 = {
     code : "M1",
