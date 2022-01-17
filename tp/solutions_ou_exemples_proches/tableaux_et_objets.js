@@ -6,10 +6,15 @@ for(let i = 0 ; i < tabVal.length ; i++){
 }
 console.log("somme = " + s);
 
+console.log("en pos=56 , tabVal[pos]=" + tabVal[56]); //undefined si indice 56 inexistant
+
+
 tabVal.sort( (a,b)=> a-b );
 //où (a,b)=> a-b est une fonction de comparaison appelée en interne par sort()
 //qui compare a et b et renvoie >0 si a>b , 0 si a==b et <0 si a < b
 console.log("apres tri, tabVal=" + tabVal);
+
+
 
 /*
 //en java , les tableaux ont des tailles fixes , ici 20: 
