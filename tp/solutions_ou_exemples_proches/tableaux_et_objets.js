@@ -13,6 +13,7 @@ tabVal.sort( (a,b)=> a-b );
 //où (a,b)=> a-b est une fonction de comparaison appelée en interne par sort()
 //qui compare a et b et renvoie >0 si a>b , 0 si a==b et <0 si a < b
 console.log("apres tri, tabVal=" + tabVal);
+console.log("apres tri, tabVal (au format JSON)=" + JSON.stringify(tabVal));
 
 
 
