@@ -7,15 +7,15 @@
    
    <h1>CRUD en mémoire via javascript et api DOM</h1>
    <!-- Devise : code:EUR , nom=Euro , change=1 -->
-   <label>code:</label> <input id="code" type="text" /> <br/>
-   <label>nom:</label> <input id="nom" type="text" /> <br/>
-   <label>change:</label> <input id="change" type="text" /> <br/>
+   <label class="simpleAlign">code:</label> <input id="code" type="text" /> <br/>
+   <label class="simpleAlign">nom:</label> <input id="nom" type="text" /> <br/>
+   <label class="simpleAlign">change:</label> <input id="change" type="text" /> <br/>
    <input type="button" onclick="newDevise()" value="New"></input>
    <input type="button" id="bntAdd" onclick="ajoutDevise()" value="Add"></input> 
    <input type="button" id="bntUpdate" onclick="updateDevise()" value="Update"></input>
    <input type="button" id="bntDelete" onclick="deleteDevise()" value="Delete"></input> 
    
-   <h3>liste des Devises<h3>
+   <h3>liste des Devises</h3>
    <table border="1" id="tableDevises">
      <thead>
       <tr><th>code</th><th>nom</th><th>change</th></tr>

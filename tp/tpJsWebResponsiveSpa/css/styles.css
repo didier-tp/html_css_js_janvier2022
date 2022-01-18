@@ -5,9 +5,23 @@
   color : red;
 }
 
+tbody tr:nth-child(2n) {
+  color: black;
+  background-color: white;
+  }
+
+tbody tr:nth-child(2n+1) {
+  color: white;
+  background-color: black;
+  }
+
+thead th {
+  background-color: yellow;
+  }
+
 p { font-size: 1.6em ; }
 
-label { width:8em;  display : inline-block;  }
+label.simpleAlign { width:8em;  display : inline-block;  }
 
 .c-fieldset {
     padding:0.5em;
