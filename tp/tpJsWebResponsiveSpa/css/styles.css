@@ -1,1 +1,23 @@
+@import "common.css"; /* à mettre au début du fichier pour que l'import soit effectif */
+
+.enEvidence {
+  font-weight : bold;
+  color : red;
+}
+
 p { font-size: 1.6em ; }
+
+label { width:8em;  display : inline-block;  }
+
+.c-fieldset {
+    padding:0.5em;
+    margin:0.5em;
+    border-width: 2px; 
+    border-style: solid;
+    border-color: black;
+  }
+ .c-legend {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+  }
