@@ -1,0 +1,6 @@
+couleurs.scss intégré dans styleExt.scss
+avec :
+- variable $couleurFond1 
+- mixin calculant couleurTexteAvecBonContraste
+
+- application sur h1,h2,h3 
