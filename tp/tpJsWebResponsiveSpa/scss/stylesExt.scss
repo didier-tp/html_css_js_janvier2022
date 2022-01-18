@@ -1,3 +1,18 @@
 @import "_couleurs";
+/*
+V1:
+h1 { @include withGoodContrastHSL(20) ;}
+h2 { @include withGoodContrastHSL(40) ;}
+h3 { @include withGoodContrastHSL(60) ;}
+h4 { @include withGoodContrastHSL(80) ;}
+h5 { @include withGoodContrastHSL(100) ;}
+h6 { @include withGoodContrastHSL(120) ;}
+*/
 
-h1 { background-color : $couleurFond1 ;}
+h1 { @include withGoodContrastHSL("red") ;}
+h2 { @include withGoodContrastHSL("green") ;}
+h3 { @include withGoodContrastHSL("blue") ;}
+h4 { @include withGoodContrastHSL("yellow") ;}
+h5 { @include withGoodContrastHSL("cyan") ;}
+h6 { @include withGoodContrastHSL("black") ;}
+h6 { @include withGoodContrastHSL("magenta") ;}

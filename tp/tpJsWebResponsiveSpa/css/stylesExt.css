@@ -1,5 +1,59 @@
+/*
+V1:
+@mixin withGoodContrastHSL($angleTeinteFond ,$s , $l ){
+    background-color: hsl($angleTeinteFond ,$s , $l);
+    color : hsl( ($angleTeinteFond + 180 ) %360 ,$s , $l);
+}
+*/
+/*
+V1:
+h1 { @include withGoodContrastHSL(20,50%,50%) ;}
+h2 { @include withGoodContrastHSL(40,50%,50%) ;}
+h3 { @include withGoodContrastHSL(60,50%,50%) ;}
+h4 { @include withGoodContrastHSL(80,50%,50%) ;}
+h5 { @include withGoodContrastHSL(100,50%,50%) ;}
+h6 { @include withGoodContrastHSL(120,50%,50%) ;}
+*/
 h1 {
-  background-color: #b8e79d;
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #d92626;
+  color: #26d9d9;
+}
+
+h2 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #26d926;
+  color: #d926d9;
+}
+
+h3 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #2662d9;
+  color: #d99d26;
+}
+
+h4 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #d9d926;
+  color: #2626d9;
+}
+
+h5 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #26d9d9;
+  color: #d92626;
+}
+
+h6 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #2662d9;
+  color: #d99d26;
+}
+
+h6 {
+  /* valeur par defaut si pas trouve dans map */
+  background-color: #d926d9;
+  color: #26d926;
 }
 
 /*# sourceMappingURL=stylesExt.css.map */
