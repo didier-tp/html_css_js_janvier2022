@@ -67,7 +67,7 @@ function afficherNews(tabNews){
 	}
 }
 
-function startNews(){ 
+function startNewsV1(){ 
 	console.log("starNews");
 	/*
     makeAjaxGetRequest("data/news.json" , function(jsonNewsData) {
@@ -114,6 +114,31 @@ function startNews(){
 			console.log("###" + JSON.stringify(tabNews));
 			afficherNews(tabNews);
 		 }) 
-	   .catch((error)=>console.log(error));
+	   .catch((error)=>console.log("$$$$$" + error));
 
+}
+
+async function startNews(){
+   try{
+     let jsonNewsData = await  makeAjaxGetRequestPromise("data/newsIndex.json");
+	 var tabNomNews = [];
+	tabNomNews=JSON.parse(jsonNewsData);
+	for(i in tabNomNews){
+			console.log(">>" + JSON.stringify(tabNomNews[i]));
+		}
+	let [jsonNews1,jsonNews2,jsonNews3,jsonNews4] = await Promise.all([
+			makeAjaxGetRequestPromise("data/" + tabNomNews[0] +".json"),
+			makeAjaxGetRequestPromise("data/" + tabNomNews[1] +".json"),
+			makeAjaxGetRequestPromise("data/" + tabNomNews[2] +".json"),
+			makeAjaxGetRequestPromise("data/" + tabNomNews[3] +".json")
+		 ]);
+	var tabNews = [JSON.parse(jsonNews1),
+			JSON.parse(jsonNews2),
+			JSON.parse(jsonNews3),
+			JSON.parse(jsonNews4)];
+     console.log(">>>" + JSON.stringify(tabNews));
+     afficherNews(tabNews);
+   }catch(e){
+	console.log("$$$$$" + e);
+   }
 }
