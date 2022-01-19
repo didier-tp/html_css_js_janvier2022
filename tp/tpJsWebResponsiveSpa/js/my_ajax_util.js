@@ -20,6 +20,15 @@ function makeAjaxGetRequest(url,callback,errCallback) {
 	xhr.send(null);
 }
 
+function makeAjaxGetRequestPromise(url) {
+	return new Promise((resolve,reject)=>{
+		var xhr = new XMLHttpRequest();
+		registerCallbacks(xhr,resolve,reject);
+		xhr.open("GET", url, true);
+		xhr.send(null);
+	});
+}
+
 function makeAjaxDeleteRequest(url,callback,errCallback) {
 	var xhr = new XMLHttpRequest();
 	registerCallbacks(xhr,callback,errCallback);

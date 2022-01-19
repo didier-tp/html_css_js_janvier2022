@@ -69,6 +69,7 @@ function afficherNews(tabNews){
 
 function startNews(){ 
 	console.log("starNews");
+	/*
     makeAjaxGetRequest("data/news.json" , function(jsonNewsData) {
 		   var tabNews = [];
 		   tabNews=JSON.parse(jsonNewsData);
@@ -77,4 +78,15 @@ function startNews(){
 		   }
 		   afficherNews(tabNews);
 	   });
+	   */
+	   makeAjaxGetRequestPromise("data/news.json")
+	   .then((jsonNewsData)=>{
+				var tabNews = [];
+				tabNews=JSON.parse(jsonNewsData);
+				for(i in tabNews){
+					console.log("##" + JSON.stringify(tabNews[i]));
+				}
+				afficherNews(tabNews);
+			})
+	   .catch((error)=>console.log(error));
 }
