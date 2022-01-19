@@ -79,6 +79,7 @@ function startNews(){
 		   afficherNews(tabNews);
 	   });
 	   */
+	  /*
 	   makeAjaxGetRequestPromise("data/news.json")
 	   .then((jsonNewsData)=>{
 				var tabNews = [];
@@ -89,4 +90,30 @@ function startNews(){
 				afficherNews(tabNews);
 			})
 	   .catch((error)=>console.log(error));
+	   */
+
+	   makeAjaxGetRequestPromise("data/newsIndex.json")
+	   .then((jsonNewsData)=>{
+				var tabNomNews = [];
+				tabNomNews=JSON.parse(jsonNewsData);
+				for(i in tabNomNews){
+					console.log("##" + JSON.stringify(tabNomNews[i]));
+				}
+				return Promise.all([
+					makeAjaxGetRequestPromise("data/" + tabNomNews[0] +".json"),
+					makeAjaxGetRequestPromise("data/" + tabNomNews[1] +".json"),
+					makeAjaxGetRequestPromise("data/" + tabNomNews[2] +".json"),
+					makeAjaxGetRequestPromise("data/" + tabNomNews[3] +".json")
+				 ]);
+			})
+		.then(([jsonNews1,jsonNews2,jsonNews3,jsonNews4])=>{
+			var tabNews = [JSON.parse(jsonNews1),
+				          JSON.parse(jsonNews2),
+						  JSON.parse(jsonNews3),
+						  JSON.parse(jsonNews4)];
+			console.log("###" + JSON.stringify(tabNews));
+			afficherNews(tabNews);
+		 }) 
+	   .catch((error)=>console.log(error));
+
 }
