@@ -16,8 +16,13 @@ function initialisations(){
     eltUlHistorique = document.getElementById("ulHistorique");
     razMessage();
 
-    var cbShowHisto = document.getElementById("cbShowHisto");
-    cbShowHisto.addEventListener("change" , function(){
+    /*var cbShowHisto = document.getElementById("cbShowHisto");*/ //en - dans nouvelle variante
+    var zoneIntermediaire = document.getElementById("zoneIntermediaire");
+    /*cbShowHisto.addEventListener("change" , function(evt){*/
+    zoneIntermediaire.addEventListener("change" , function(evt){
+        console.log("evt.type="+evt.type);
+        console.log("evt.target.id="+evt.target.id);
+        var cbShowHisto = evt.target;//en + dans nouvelle variante
         if(cbShowHisto.checked){
             ulHistorique.style.display ="block";
         } else {
