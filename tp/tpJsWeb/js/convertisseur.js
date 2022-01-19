@@ -6,6 +6,8 @@ var eltUlHistorique;
 
 var coeff;
 
+window.addEventListener('load', initialisations);
+
 function initialisations(){
 
     coeff = 180 / Math.PI;
@@ -25,8 +27,10 @@ function initialisations(){
         var cbShowHisto = evt.target;//en + dans nouvelle variante
         if(cbShowHisto.checked){
             ulHistorique.style.display ="block";
+            //ulHistorique.style.visibility ="visible";
         } else {
             ulHistorique.style.display ="none";
+            //ulHistorique.style.visibility ="hidden";
         }
     })
 }
@@ -65,7 +69,7 @@ function degresToRadians(){
         afficherErreur("le nombre de degrés à convertir doit être numérique")
     }else{
         eltTxtRadians.value =   eltTxtDegres.value / coeff;
-        addConversionHistorique(""+eltTxtDegres.value + " degres = "
-                                + eltTxtRadians.value+" radians "  );
+        addConversionHistorique(`${eltTxtDegres.value} degres = 
+                                 ${eltTxtRadians.value} radians `  );
     }
 }
