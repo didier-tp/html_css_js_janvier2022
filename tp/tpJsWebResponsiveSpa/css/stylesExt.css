@@ -1,23 +1,26 @@
 /*
-V1:
-@mixin withGoodContrastHSL($angleTeinteFond ,$s , $l ){
+V2:
+@mixin withGoodContrastHSL($angleTeinteFond ,$s : 70%  , $l : 50% ){
     background-color: hsl($angleTeinteFond ,$s , $l);
     color : hsl( ($angleTeinteFond + 180 ) %360 ,$s , $l);
 }
 */
+/* V3*/
 /*
-V1:
-h1 { @include withGoodContrastHSL(20,50%,50%) ;}
-h2 { @include withGoodContrastHSL(40,50%,50%) ;}
-h3 { @include withGoodContrastHSL(60,50%,50%) ;}
-h4 { @include withGoodContrastHSL(80,50%,50%) ;}
-h5 { @include withGoodContrastHSL(100,50%,50%) ;}
-h6 { @include withGoodContrastHSL(120,50%,50%) ;}
+V2:
+h1 { @include withGoodContrastHSL(20) ;}
+h2 { @include withGoodContrastHSL(40) ;}
+h3 { @include withGoodContrastHSL(60) ;}
+h4 { @include withGoodContrastHSL(80) ;}
+h5 { @include withGoodContrastHSL(100) ;}
+h6 { @include withGoodContrastHSL(120) ;}
 */
+/* v3*/
 h1 {
   /* valeur par defaut si pas trouve dans map */
   background-color: #d92626;
   color: #26d9d9;
+  text-decoration: underline;
 }
 
 h2 {
